@@ -6,7 +6,6 @@ import Data from './data.json';
 import { Card } from './components/Card'
 
 function App() {
-	console.log('Data :>> ', Data);
 	if (!Data.socialmedia) {
 		return null;
 	}
