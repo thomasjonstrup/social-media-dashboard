@@ -21,9 +21,10 @@ function App() {
 			</header>
 
 			<div className="followers">
-				{Data.socialmedia.map((item) => {
+				{Data.socialmedia.map((item, index) => {
 					return (
 						<Card
+							key={index}
 							name={item.name}
 							followers={item.followers}
 							today={item.today}
@@ -33,9 +34,10 @@ function App() {
 			</div>
 			<h2> Overview - Today</h2>
 			<div className="followers">
-				{Data.overviewToday.map((item) => {
+				{Data.overviewToday.map((item, index) => {
 					return (
 						<Card
+							key={index}
 							name={item.title}
 							followers={item.number}
 							today={item.percent}
