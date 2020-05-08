@@ -31,3 +31,10 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+        
+    # Run test
+    - uses: actions/checkout@v2
+    - name: Run install
+      run: npm install
+    - name: Run test
+      run: npm run test
