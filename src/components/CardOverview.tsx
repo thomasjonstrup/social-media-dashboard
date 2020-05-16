@@ -4,8 +4,6 @@ import { Icon } from "./Icon";
 
 import { ThemeContext } from "../contexts/ThemeContext";
 
-const Paragraph = styled.p<{ scheme: string }>`color: ${props => props.scheme === 'dark' ? 'var(--color-dark-text)' : 'var(--color-light-text)'}; text-transform: uppercase;`;
-
 const Span = styled.span<{ type: string }>`
 	color: ${(props) =>
 		props.type === "up" ? "var(--color-green)" : "var(--color-red)"};
@@ -15,12 +13,13 @@ const Span = styled.span<{ type: string }>`
 	font-weight: 700;
 `;
 
+const Heading3 = styled.h3`margin: 0.5rem;`;
+
 const CardInner = styled.div`
 	display: grid;
 	justify-content: space-between;
 	grid-template-columns: auto auto;
 	align-items: center;
-	padding: 0 2rem;
 `;
 
 const CardContainer = styled.div<{ scheme: string; icon: string }>`
@@ -31,40 +30,19 @@ background: ${(props) =>
 	props.scheme === "dark"
 		? "var(--color-dark-card-bg)"
 		: "var(--color-light-card-bg)"};
-padding: 2rem 0;
+//padding: .5rem;
+padding: 1.2rem;
 
 box-shadow: 0 3px 6px rgba(32,32,32,.1), 0 3px 6px rgba(32,32,32,.1);
-
-/*   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center; */
   //padding: 20px;
-  min-height: 170px;
-
-
-
-  position: relative;
-
-  	&::before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		content: "";
-		height: 5px;
-		display: block;
-		background: var(--color-${(props) => props.icon})
-	}
 `;
 
 const CardFollowers = styled.h2`
-	font-size: 2.5rem;
-	margin: 0.2rem;
+	font-size: 2rem;
+	margin: 0.5rem;
 `;
 
-interface CardProps {
+interface CardOverviewProps {
 	name: string;
 	followers: string;
 	today: string; //number
@@ -72,7 +50,7 @@ interface CardProps {
 	type: string;
 }
 
-export const Card: React.FC<CardProps> = ({
+export const CardOverview: React.FC<CardOverviewProps> = ({
 	name,
 	followers,
 	today,
@@ -83,18 +61,19 @@ export const Card: React.FC<CardProps> = ({
 	return (
 		<CardContainer scheme={theme} icon={icon}>
 			<CardInner>
+				<Heading3>{name}</Heading3>
 				<Icon name={icon} />
-				<h3>{name}</h3>
 			</CardInner>
-			<CardFollowers className="card__followers">
-				{followers}
-			</CardFollowers>
-			<Paragraph scheme={theme}>Followers</Paragraph>
-			<div className="card__today">
-				<Span type={type}>
-					<Icon name={type} /> {today}
-				</Span>
-			</div>
+			<CardInner>
+				<CardFollowers className="card__followers">
+					{followers}
+				</CardFollowers>
+				<div className="card__today">
+					<Span type={type}>
+						<Icon name={type} /> {today}
+					</Span>
+				</div>
+			</CardInner>
 		</CardContainer>
 	);
 };

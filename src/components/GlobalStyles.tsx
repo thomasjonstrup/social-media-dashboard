@@ -22,8 +22,9 @@ export const GlobalStyles = createGlobalStyle(
 					--color-red: hsl(356, 69%, 56%);
 					--color-facebook: hsl(195, 100%, 50%);
 					--color-twitter:  hsl(203, 89%, 53%);
-					--color-instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+					--color-instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
 					--color-youtube: hsl(348, 97%, 39%);
+					--color-toggle:  hsl(230, 22%, 74%);
 
 					body {
 						background-color: ${props.theme === "light"

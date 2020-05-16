@@ -1,12 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import './App.css';
+import "./App.css";
 
-import Data from './data.json';
-import { Card } from './components/Card'
+import Data from "./data.json";
+import { Card } from "./components/Card";
 
-import {ThemeProvider} from './contexts/ThemeContext';
-import { Header } from './components/Header';
+import { ThemeProvider } from "./contexts/ThemeContext";
+import { Header } from "./components/Header";
+import { CardOverview } from "./components/CardOverview";
+import { Attribution } from "./components/Attribution";
 
 /* const getMql = () => window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)'); */
 
@@ -14,7 +16,6 @@ function App() {
 	if (!Data.socialmedia) {
 		return null;
 	}
-
 
 	return (
 		<ThemeProvider>
@@ -39,7 +40,7 @@ function App() {
 				<div className="followers">
 					{Data.overviewToday.map((item, index) => {
 						return (
-							<Card
+							<CardOverview
 								key={index}
 								name={item.title}
 								followers={item.number}
@@ -50,6 +51,7 @@ function App() {
 						);
 					})}
 				</div>
+				<Attribution />
 			</div>
 		</ThemeProvider>
 	);

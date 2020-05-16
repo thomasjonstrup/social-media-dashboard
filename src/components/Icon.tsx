@@ -7,8 +7,6 @@ import Instagram from "../images/icon-instagram.svg";
 import Up from "../images/icon-up.svg";
 import Down from "../images/icon-down.svg";
 
-import styled from "styled-components";
-
 interface IconProps {
 	name: string;
 }

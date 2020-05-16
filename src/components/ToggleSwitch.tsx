@@ -3,7 +3,7 @@ import React, { useCallback, useContext } from "react";
 import styled from 'styled-components';
 import {ThemeContext} from '../contexts/ThemeContext';
 
-const Checkbox = styled.input`
+const Checkbox = styled.input<{ theme: string }>`
 	appearance: none;
 	width: 4rem;
 	height: 2rem;
@@ -14,17 +14,19 @@ const Checkbox = styled.input`
 	transition: background-color 0.09s ease-in-out;
 	position: relative;
 
-	background-image: linear-gradient(
-		to right,
-		hsl(210, 78%, 56%),
-		hsl(146, 68%, 55%)
-	);
+	background-color:  var(--color-toggle);
 
 	&:checked {
 		&::after {
 			left: 0;
-			background-color: black;
+			background-color: var(--color-dark-bg);
 		}
+
+			background-image: linear-gradient(
+		to right,
+		hsl(210, 78%, 56%),
+		hsl(146, 68%, 55%)
+	);
 	}
 
 	&::after {
@@ -69,6 +71,7 @@ export const ToggleSwitch: React.FC<ToggleSwitchProps> = ({
 					name="switch_1"
 					className="toggle_switch"
 					onChange={handleSwitch}
+					theme={theme}
 					checked={theme === 'dark'}
 				/>
 			);
