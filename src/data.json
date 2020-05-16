@@ -2,64 +2,88 @@
 	"socialmedia": [{
 		"name": "@nathanf",
 		"followers": "1987",
-		"today": "12"
+		"today": "12",
+		"icon": "facebook",
+		"type": "up"
 	},
 	{
 		"name": "@nathanf",
 		"followers": "1044",
-		"today": "99"
+		"today": "99",
+		"icon": "twitter",
+		"type": "up"
 	},
 	{
 		"name": "@realnathanf",
 		"followers": "11k",
-		"today": "1099"
+		"today": "1099",
+		"icon": "instagram",
+		"type": "up"
 	},
 	{
 		"name": "Nathan F.",
 		"followers": "8239",
-		"today": "144"
+		"today": "144",
+		"icon": "youtube",
+		"type": "down"
 	}
 ],
 	"overviewToday": [
 		{
 			"title": "Page Views",
 			"number": "87",
-			"percent": "3%"
+			"percent": "3%",
+			"icon": "facebook",
+			"type": "up"
 		},
 		{
 			"title": "Likes",
 			"number": "52",
-			"percent": "2%"
+			"percent": "2%",
+			"icon": "facebook",
+			"type": "down"
 		},
 		{
 			"title": "Likes",
 			"number": "5462",
-			"percent": "2257%"
+			"percent": "2257%",
+			"icon": "instagram",
+			"type": "up"
 		},
 		{
 			"title": "Profile Views",
 			"number": "52k",
-			"percent": "1375%"
+			"percent": "1375%",
+			"icon": "instagram",
+			"type": "up"
 		},
 		{
 			"title": "Retweets",
 			"number": "117",
-			"percent": "303%"
+			"percent": "303%",
+			"icon": "twitter",
+			"type": "up"
 		},
 		{
 			"title": "Likes",
 			"number": "507",
-			"percent": "553%"
+			"percent": "553%",
+			"icon": "twitter",
+			"type": "up"
 		},
 		{
 			"title": "Likes",
 			"number": "107",
-			"percent": "19%"
+			"percent": "19%",
+			"icon": "youtube",
+			"type": "down"
 		},
 		{
 			"title": "Total Views",
 			"number": "1407",
-			"percent": "12%"
+			"percent": "12%",
+			"icon": "youtube",
+			"type": "down"
 		}
 	]
 }
