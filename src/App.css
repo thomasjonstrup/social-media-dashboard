@@ -24,6 +24,9 @@
 	margin: auto;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+
+	width: auto;
+	max-width: 1110px;
 }
 
 .App-header {
