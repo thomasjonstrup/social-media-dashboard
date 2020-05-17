@@ -4,6 +4,7 @@
 		"followers": "1987",
 		"today": "12",
 		"icon": "facebook",
+		"title":"followers",
 		"type": "up"
 	},
 	{
@@ -11,6 +12,7 @@
 		"followers": "1044",
 		"today": "99",
 		"icon": "twitter",
+		"title": "followers",
 		"type": "up"
 	},
 	{
@@ -18,6 +20,7 @@
 		"followers": "11k",
 		"today": "1099",
 		"icon": "instagram",
+		"title": "followers",
 		"type": "up"
 	},
 	{
@@ -25,6 +28,7 @@
 		"followers": "8239",
 		"today": "144",
 		"icon": "youtube",
+		"title": "subscribers",
 		"type": "down"
 	}
 ],

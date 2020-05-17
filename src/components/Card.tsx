@@ -70,6 +70,7 @@ interface CardProps {
 	today: string; //number
 	icon: string;
 	type: string;
+	title: string;
 }
 
 export const Card: React.FC<CardProps> = ({
@@ -78,6 +79,7 @@ export const Card: React.FC<CardProps> = ({
 	today,
 	icon,
 	type,
+	title
 }) => {
 	const { theme } = useContext(ThemeContext);
 	return (
@@ -89,10 +91,10 @@ export const Card: React.FC<CardProps> = ({
 			<CardFollowers className="card__followers">
 				{followers}
 			</CardFollowers>
-			<Paragraph scheme={theme}>Followers</Paragraph>
+			<Paragraph scheme={theme}>{title}</Paragraph>
 			<div className="card__today">
 				<Span type={type}>
-					<Icon name={type} /> {today}
+					<Icon name={type} />{' '} {`${today} Today`}
 				</Span>
 			</div>
 		</CardContainer>

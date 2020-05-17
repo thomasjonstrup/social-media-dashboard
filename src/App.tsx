@@ -32,6 +32,7 @@ function App() {
 								today={item.today}
 								icon={item.icon}
 								type={item.type}
+								title={item.title}
 							/>
 						);
 					})}
