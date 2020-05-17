@@ -27,6 +27,7 @@ export const GlobalStyles = createGlobalStyle(
 					--color-toggle:  hsl(230, 22%, 74%);
 
 					body {
+						font-size: 12px;
 						background-color: ${props.theme === "light"
 							? "var(--color-light-bg)"
 							: "var(--color-dark-bg)"};

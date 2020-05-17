@@ -2,6 +2,10 @@
 	text-align: center;
 }
 
+html {
+	font-size: 100%;
+}
+
 .App-logo {
 	height: 40vmin;
 	pointer-events: none;
@@ -52,9 +56,15 @@
 	/*color: white;*/
 }
 
-@media (max-width: 800px) {
+@media (max-width: 450px) {
 	.followers {
 		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@media screen and (max-width: 768px) and (min-width: 450px) {
+	.followers {
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 

@@ -13,8 +13,6 @@ const Span = styled.span<{ type: string }>`
 	font-weight: 700;
 `;
 
-const Heading3 = styled.h3`margin: 0.5rem;`;
-
 const CardInner = styled.div`
 	display: grid;
 	justify-content: space-between;
@@ -37,8 +35,15 @@ box-shadow: 0 3px 6px rgba(32,32,32,.1), 0 3px 6px rgba(32,32,32,.1);
   //padding: 20px;
 `;
 
+const Heading3 = styled.h3<{ scheme: string }>`
+	color: ${props => props.scheme === 'dark' ? 'var(--color-dark-text)' : 'var(--color-light-text)'};
+	font-size: 0.6rem;
+	margin: 0.5rem;
+`;
+
+
 const CardFollowers = styled.h2`
-	font-size: 2rem;
+	font-size: 1.5rem;
 	margin: 0.5rem;
 `;
 
@@ -61,7 +66,7 @@ export const CardOverview: React.FC<CardOverviewProps> = ({
 	return (
 		<CardContainer scheme={theme} icon={icon}>
 			<CardInner>
-				<Heading3>{name}</Heading3>
+				<Heading3 scheme={theme}>{name}</Heading3>
 				<Icon name={icon} />
 			</CardInner>
 			<CardInner>

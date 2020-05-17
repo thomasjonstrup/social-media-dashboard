@@ -16,11 +16,15 @@ const Span = styled.span<{ type: string }>`
 `;
 
 const CardInner = styled.div`
-	display: grid;
+/* 	display: grid;
 	justify-content: space-between;
 	grid-template-columns: auto auto;
 	align-items: center;
-	padding: 0 2rem;
+	padding: 0 4rem; */
+
+	    justify-content: center;
+    align-items: center;
+    display: flex;
 `;
 
 const CardContainer = styled.div<{ scheme: string; icon: string }>`
@@ -63,6 +67,13 @@ const CardFollowers = styled.h2`
 	font-size: 2.5rem;
 	margin: 0.2rem;
 `;
+const Span2 = styled.span`
+	margin-right: 0.2rem;
+`;
+const Heading3 = styled.h3<{ scheme: string }>`
+	color: ${props => props.scheme === 'dark' ? 'var(--color-dark-text)' : 'var(--color-light-text)'};
+	font-size: 0.6rem;
+`;
 
 interface CardProps {
 	name: string;
@@ -85,8 +96,8 @@ export const Card: React.FC<CardProps> = ({
 	return (
 		<CardContainer scheme={theme} icon={icon}>
 			<CardInner>
-				<Icon name={icon} />
-				<h3>{name}</h3>
+				<Span2><Icon name={icon} /></Span2>
+				<Heading3 scheme={theme}>{name}</Heading3>
 			</CardInner>
 			<CardFollowers className="card__followers">
 				{followers}
